@@ -58,6 +58,7 @@
     list-style: none;
     border-radius: 50%;
     overflow: hidden;
+    cursor: pointer;
 }
 .navi > li:first-of-type {
     margin-left: 0;
