@@ -1,13 +1,19 @@
 import AudioBox from "../components/AudioBox";
 import "./HomePage.css";
-import tangled from "../images/tangled.jfif"
+import coco from "../images/coco.jpg"
+import { useState } from "react";
 
 function HomePage() {
+    const [albumCover, setAlbumCover] = useState(coco)
+
     return (
         <div className="container">
-            <img src={tangled} />
+            <img src={albumCover} />
             <div className="overlap"></div>
-            <AudioBox />
+            <AudioBox
+                albumCover={albumCover}
+                setAlbumCover={setAlbumCover}
+            />
         </div>
     )
 }
