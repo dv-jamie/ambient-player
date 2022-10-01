@@ -48,7 +48,7 @@ function AudioBox(props) {
             </div>
             <div className="album-cover">
                 <img src={props.albumCover} />
-                <audio autoPlay controls ref={audioRef} src={audioSrc} />
+                <audio autoPlay loop controls ref={audioRef} src={audioSrc} />
             </div>
             <ul className="navi">
                 <li onClick={() => onNaviClick('coco')}>
