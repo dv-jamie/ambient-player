@@ -1,52 +1,72 @@
+import { useEffect, useRef, useState } from "react";
 import "./AudioBox.css";
-import coco_thumb from "../images/coco_thumb.jpg"
-import frozen_thumb from "../images/frozen_thumb.jpg"
-import moana_thumb from "../images/moana_thumb.jpeg"
-import tangled_thumb from "../images/tangled_thumb.jpeg"
-import zootopia_thumb from "../images/zootopia_thumb.jpg"
-import coco from "../images/coco.jpg"
-import frozen from "../images/frozen.jpg"
-import moana from "../images/moana.jpg"
-import tangled from "../images/tangled.jfif"
-import zootopia from "../images/zootopia.jfif"
-import { useState } from "react";
+
+const images_thumb = {
+    coco: require('../images/coco_thumb.jpg'),
+    frozen: require('../images/frozen_thumb.jpg'),
+    moana: require('../images/moana_thumb.jpeg'),
+    tangled: require('../images/tangled_thumb.jpeg'),
+    zootopia: require('../images/zootopia_thumb.jpg'),
+}
+const images = {
+    coco: require('../images/coco.jpg'),
+    frozen: require('../images/frozen.jpg'),
+    moana: require('../images/moana.jpg'),
+    tangled: require('../images/tangled.jpeg'),
+    zootopia: require('../images/zootopia.jpg'),
+}
+const audios = {
+    coco: require('../audios/coco_ost.mp3'),
+    frozen: require('../audios/frozen_ost.mp3'),
+    moana: require('../audios/moana_ost.mp3'),
+    tangled: require('../audios/tangled_ost.mp3'),
+    zootopia: require('../audios/zootopia_ost.mp3'),
+}
 
 function AudioBox(props) {
-    const [albumTitle, setAlbumTitle] = useState("coco")
+    const audioRef = useRef()
+    const [audioSrc, setAudioSrc] = useState()
+    const [albumTitle, setAlbumTitle] = useState('COCO')
+    
+    useEffect(() => {
+        audioRef.current.src = audios.coco
+        console.log(audioRef.current)
+    }, [])
 
-    const onNaviClick = (src, name) => {
-        props.setAlbumCover(src)
-        setAlbumTitle(name)
+
+    const onNaviClick = (name) => {
+        props.setAlbumCover(images[name])
+        setAudioSrc(audios[`${name}_ost`])
+        setAlbumTitle(name.toUpperCase())
     }
 
     return (
         <div className="audio-box">
-            <h3 className="title">Disney OST</h3>
+            <div className="title-wrap">
+                <h1 className="album-title">{albumTitle}</h1>
+                <h3 className="title">Disney OST</h3>
+            </div>
             <div className="album-cover">
                 <img src={props.albumCover} />
-                <div className="button-wrap">
-                    <span class="play_button material-symbols-outlined">play_circle</span>
-                    <div className="volume-controller">
-                        <input type="range" min="0" max="1" step="0.01" value="1" />
-                    </div>
-                </div>
+                <audio controls ref={audioRef}>
+                    <source src={audioSrc} type='audio/mpeg' />
+                </audio>
             </div>
-            <h1 className="album-title">{albumTitle}</h1>
             <ul className="navi">
-                <li onClick={() => onNaviClick(coco, "COCO")}>
-                    <img src={coco_thumb} />
+                <li onClick={() => onNaviClick('coco')}>
+                    <img src={images_thumb.coco} />
                 </li>
-                <li onClick={() => onNaviClick(frozen, "FROZEN")}>
-                    <img src={frozen_thumb} />
+                <li onClick={() => onNaviClick('frozen')}>
+                    <img src={images_thumb.frozen} />
                 </li>
-                <li onClick={() => onNaviClick(moana, "MOANA")}>
-                    <img src={moana_thumb} />
+                <li onClick={() => onNaviClick('moana')}>
+                    <img src={images_thumb.moana} />
                 </li>
-                <li onClick={() => onNaviClick(tangled, "TANGLED")}>
-                    <img src={tangled_thumb} />
+                <li onClick={() => onNaviClick('tangled')}>
+                    <img src={images_thumb.tangled} />
                 </li>
-                <li onClick={() => onNaviClick(zootopia, "ZOOTOPIA")}>
-                    <img src={zootopia_thumb} />
+                <li onClick={() => onNaviClick('zootopia')}>
+                    <img src={images_thumb.zootopia} />
                 </li>
             </ul>
         </div>

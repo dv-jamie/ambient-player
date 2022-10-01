@@ -1,18 +1,26 @@
 .audio-box {
-    width: 300px;
+    width: 350px;
     margin: 0 auto;
-    padding: 30px;
+    padding: 25px;
     background:rgba(255, 255, 255, 0.2);
     border: 2px solid #fff;
     color: #fff;
-    text-align: center;
     overflow: hidden;
     z-index: 100;
 }
 
-.title {
-    text-align: left;
+.title-wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    width: 100%;
     margin-bottom: 5px;
+}
+.album-title {
+    font-size: 35px;
+}
+.title {
+    font-size: 16px;
 }
 
 .album-cover {
@@ -25,34 +33,27 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-    object-position: 70%;
 }
-.button-wrap {
+.album-cover > audio {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-.play_button {
-    font-size: 70px;
-    color: #fff;
-    cursor: pointer;
-}
-.volume-controller > input {
-    cursor: pointer;
+    left: 0;
+    bottom: 0;
+    height: 30px;
+    background-color: #fff;
+    z-index: 10;
 }
 
-.album-title {
-    margin: 5px 0 20px;
-    font-size: 35px;
+.navi {
+    width: 100%;
+    margin-top: 25px;
+    padding-top: 15px;
+    border-top: 1px solid #fff;
 }
-
 .navi > li {
     display: inline-block;
     width: 50px;
     height: 50px;
-    margin: 0 6px;
+    margin: 0 4px;
     list-style: none;
     border-radius: 50%;
     overflow: hidden;
