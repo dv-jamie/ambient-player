@@ -36,7 +36,7 @@ function AudioBox(props) {
 
     const onNaviClick = (name) => {
         props.setAlbumCover(images[name])
-        setAudioSrc(audios[`${name}_ost`])
+        setAudioSrc(audios[name])
         setAlbumTitle(name.toUpperCase())
     }
 
@@ -48,9 +48,7 @@ function AudioBox(props) {
             </div>
             <div className="album-cover">
                 <img src={props.albumCover} />
-                <audio controls ref={audioRef}>
-                    <source src={audioSrc} type='audio/mpeg' />
-                </audio>
+                <audio autoPlay controls ref={audioRef} src={audioSrc} />
             </div>
             <ul className="navi">
                 <li onClick={() => onNaviClick('coco')}>
