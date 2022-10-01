@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/ambient_player/static/css/main.30cbaac2.css",
+    "main.js": "/ambient_player/static/js/main.8bc131a8.js",
+    "static/media/tangled_ost.mp3": "/ambient_player/static/media/tangled_ost.9c28f096250fea542392.mp3",
+    "static/media/zootopia_ost.mp3": "/ambient_player/static/media/zootopia_ost.cc0e78b746ec86150179.mp3",
+    "static/media/frozen_ost.mp3": "/ambient_player/static/media/frozen_ost.0284f727c9e789b7a500.mp3",
+    "static/media/moana_ost.mp3": "/ambient_player/static/media/moana_ost.733d1753851bfeac7abd.mp3",
+    "static/media/coco_ost.mp3": "/ambient_player/static/media/coco_ost.d22d28eccf87550b8cfc.mp3",
+    "static/media/frozen_thumb.jpg": "/ambient_player/static/media/frozen_thumb.236daf21db5a01e543eb.jpg",
+    "static/media/tangled.jpeg": "/ambient_player/static/media/tangled.32f379d9c2ec52fe4488.jpeg",
+    "static/media/coco.jpg": "/ambient_player/static/media/coco.1ee863eebe3d886a8a88.jpg",
+    "static/media/moana.jpg": "/ambient_player/static/media/moana.a6b6f9b250301e6a749c.jpg",
+    "static/media/frozen.jpg": "/ambient_player/static/media/frozen.f0d63e8b7d2fda2781b8.jpg",
+    "static/media/moana_thumb.jpeg": "/ambient_player/static/media/moana_thumb.1466c2abd1ab8da9f8af.jpeg",
+    "static/media/zootopia.jpg": "/ambient_player/static/media/zootopia.be75e4b29afcad0c0371.jpg",
+    "static/media/tangled_thumb.jpeg": "/ambient_player/static/media/tangled_thumb.e9685ab0f905715a400e.jpeg",
+    "static/media/coco_thumb.jpg": "/ambient_player/static/media/coco_thumb.87261ac44ab3f3be4d50.jpg",
+    "static/media/zootopia_thumb.jpg": "/ambient_player/static/media/zootopia_thumb.83ca9e184ba7c2e015e2.jpg",
+    "index.html": "/ambient_player/index.html",
+    "main.30cbaac2.css.map": "/ambient_player/static/css/main.30cbaac2.css.map",
+    "main.8bc131a8.js.map": "/ambient_player/static/js/main.8bc131a8.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.30cbaac2.css",
+    "static/js/main.8bc131a8.js"
+  ]
+}
